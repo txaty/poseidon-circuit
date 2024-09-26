@@ -1,17 +1,14 @@
 [workspace]
-members = [
-    "poseidon-circuit",
-    "poseidon-base"
-]
+members = ["poseidon-circuit", "poseidon-base"]
 resolver = "2"
 
 [workspace.dependencies]
 bencher = "0.1"
 bitvec = "1"
 ff = "0.13"
-halo2curves = { version = "0.1.0", features = [ "derive_serde" ] }
-halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2.git", tag = "v2022_09_10" }
-itertools = "0.13.0" # for compatibility msrv 1.75
+halo2curves = { version = "0.1.0", features = ["derive_serde"] }
+halo2_proofs = { git = "https://github.com/txaty/halo2.git", branch = "sublonk-multi-row" }
+itertools = "0.13.0"                                                                        # for compatibility msrv 1.75
 lazy_static = "1.4"
 log = "0.4"
 once_cell = "1.19"
@@ -25,5 +22,5 @@ thiserror = "1.0"
 opt-level = 3
 debug-assertions = true
 
-[patch."https://github.com/privacy-scaling-explorations/halo2.git"]
-halo2_proofs = { git = "https://github.com/scroll-tech/halo2.git", branch = "v1.0" }
+# [patch."https://github.com/privacy-scaling-explorations/halo2.git"]
+# halo2_proofs = { git = "https://github.com/scroll-tech/halo2.git", branch = "v1.0" }
