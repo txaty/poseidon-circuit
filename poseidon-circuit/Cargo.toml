@@ -13,7 +13,8 @@ rand_xorshift.workspace = true
 rand.workspace = true
 
 [features]
-default = ["halo2_proofs/parallel_syn", "short"]
+# default = ["halo2_proofs/parallel_syn", "short"]
+default = ["short"]
 # Use an implementation using fewer rows (8) per permutation.
 short = ["poseidon-base/short"]
 # printout the layout of circuits for demo and some unittests
